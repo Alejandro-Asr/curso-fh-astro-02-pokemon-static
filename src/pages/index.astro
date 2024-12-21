@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import type { PokemonListResponse } from '../interfaces/pokemon-list.response';
 import PokemonCard from '../components/pokemons/PokemonCard.astro';
+import Title from 'src/shared/Title.astro';
 
 const title = 'Pokémon Static | Home';
 
@@ -11,8 +12,7 @@ console.log('🚀 ~ data:', data);
 ---
 
 <MainLayout title={title}>
-  <h1 class="text-3xl">Listado de Pokémons</h1>
-  <hr />
+  <Title>Listado Paginado</Title>
   <section
     aria-label="Listado de Pokémos"
     class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-5"
